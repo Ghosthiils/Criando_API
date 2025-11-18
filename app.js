@@ -55,6 +55,14 @@ res.send(nomeCardapio)
     res.send(`${produto} inserido com sucesso!`)
  })
 
+ app.get("marmitas", function (req, res) {
+    res.send(itensCardapio)
+ })
+
+ app.get("/marmitas/:id", function (req, res){
+    let id = req.params.id
+    res.send(itensCardapio[id])
+ })
  
 
  app.listen(3000) 
